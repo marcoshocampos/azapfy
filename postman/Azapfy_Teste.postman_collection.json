@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "20adfb0e-349a-4a65-84f0-3e0a1b63a968",
+		"name": "Azapfy_Teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21559185"
+	},
+	"item": [
+		{
+			"name": "Get remetentes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/azapfy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"azapfy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get calcula valor total",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/valor-nota",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"valor-nota"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get calcula valor entregue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/valor-entregue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"valor-entregue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get calcula valor não entregue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/valor-nao-entregue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"valor-nao-entregue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get calcula valor em atraso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/valor-atraso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"valor-atraso"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
