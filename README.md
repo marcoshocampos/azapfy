@@ -20,7 +20,7 @@ A API consumida para a obtenção dos dados foi tratada na função *apiremetent
 
 ## Agrupar as notas por remetente.
 
-Ainda na função *apiremetente*, é usado a estrutura de repetição FOREACH para percorrer a API e separar as informações que contenham o mesmo CNPJ de remetente, atribuindo-os ao objeto $remetentes. É usado um *array_push* para termos um onjeto de arrays de objetos, de forma que, ou é adicionado uma posição no array ao identificar um novo CNPJ do remetente, ou é "concatenado" o novo objeto a mesma posição do array já existente. Esta função retorna o $remetentes para que seja utilizando nas demais tarefas. 
+Ainda na função *apiremetente*, é usado a estrutura de repetição FOREACH para percorrer a API e separar as informações que contenham o mesmo CNPJ de remetente, atribuindo-os ao objeto $remetentes. É usado um *array_push* para termos um objeto de arrays de objetos, de forma que, ou é adicionado uma posição no array ao identificar um novo CNPJ do remetente, ou é "concatenado" o novo objeto a mesma posição do array já existente. Esta função retorna o $remetentes para que seja utilizando nas demais tarefas. 
 
 Utilizando a função *index*, temos o retorno em JSON o objeto $remetentes.
 
