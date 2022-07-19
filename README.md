@@ -28,8 +28,7 @@ Utilizando a função *index*, temos o retorno em JSON o objeto $remetentes.
 
 Na função *readValorNota*, utiliza-se dois FOREACH: no primeiro é percorrido novamente o objeto $remetentes, e no segundo percorre-se o array de objetos que já estão separados por CNPJ do remetente, esta lógica é utilizda para todas as demais tarefas. Tendo esta separação, é necessário apenas somar os campos referentes a valor, estes são armazenados na variável $somar_notas_rementente.
 
-A medida que tem-se o total para cada CNPJ remetente, é armazenado em um outro objeto criado
-É retornado o objeto $soma_notas, que contém o valor total das notas ($somar_notas_rementente) para cada nome de remetente ($nome_remetente).
+A medida que tem-se o total para cada CNPJ remetente, é armazenado em um outro objeto criado. É retornado o objeto $soma_notas, que contém o valor total das notas ($somar_notas_rementente) para cada nome de remetente ($nome_remetente).
 
 ## Calcular o valor que o remetente irá receber pelo que já foi entregue.
 
