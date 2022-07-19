@@ -34,7 +34,7 @@ A medida que tem-se o total para cada CNPJ remetente, é armazenado em um outro 
 
 Na função *readValorEntregue* segue-se a mesma lógica mencionada anteriormente, 2 FOREACH com objetivo de realizar o somatório das notas. A diferença aqui é a necessidade de se utilizar estruturas condicionais para fragmentar o código.
 
-Aqui tem-se duas condições: a primeira para percorrer somente os objetos a qual o valor do status seja 'COMPROVADO', e para cada objeto que atingir esta condição, subtrair a data de entrega com a data de emissão (usando-se a classe *DateTime* e o método *format* para transformar do padrão brasileiro em padrão americano para realizar os calculos). A segunda condição é para atender a regra de negócio referente aos remetentes receberem somente por produtos que tenham no máximo 2 dias de transporte, logo, somente os resultados menor ou igual a 2 da primeira condição tem seu valor somado aqui.
+Aqui tem-se duas condições: a primeira para percorrer somente os objetos a qual o valor do status seja 'COMPROVADO', e para cada objeto que atingir esta condição, subtrair a data de entrega com a data de emissão (usando-se a classe *DateTime* e o método *format* para transformar do padrão brasileiro ao padrão americano e realizar os calculos). A segunda condição é para atender a regra de negócio referente aos remetentes receberem somente por produtos que tenham no máximo 2 dias de transporte, logo, somente os resultados menor ou igual a 2 da primeira condição tem seu valor somado aqui.
 
 É retornado o objeto $soma_entregue, que contém o valor total das notas da segunda condição ($somar_entrega) para cada nome de remetente ($nome_remet).
 
