@@ -18,16 +18,17 @@ A API consumida para a obtenção dos dados foi tratada na função *apiremetent
 
 - http://homologacao3.azapfy.com.br/api/ps/notas
 
-Nesta mesma função, também é usado a estrutura de repetição FOREACH para percorrer a API e separar as informações que contenham o mesmo CNPJ de remetente, atribuindo-os ao objeto $remetentes. É usado um *array_push* para termos um onjeto de arrays de objetos, de forma que, ou é adicionado uma posição no array ao identificar um novo CNPJ do remetente, ou é "concatenado" o novo objeto a mesma posição do array já existente.
-
-Esta função retorna o *$remetentes* para que seja utilizando nas 5 tarefas.
-
 ## Agrupar as notas por remetente.
 
-Utilizando a função index, apenas retornamos em JSON o objeto *$remetentes* 
+Ainda na função *apiremetente*, é usado a estrutura de repetição FOREACH para percorrer a API e separar as informações que contenham o mesmo CNPJ de remetente, atribuindo-os ao objeto $remetentes. É usado um *array_push* para termos um onjeto de arrays de objetos, de forma que, ou é adicionado uma posição no array ao identificar um novo CNPJ do remetente, ou é "concatenado" o novo objeto a mesma posição do array já existente. Esta função retorna o $remetentes para que seja utilizando nas demais tarefas. 
+
+Utilizando a função *index*, temos o retorno em JSON o objeto $remetentes.
 
 ## Calcular o valor total das notas para cada remetente.
 
+Utilizando dois FOREACH, no primeiro é percorrido novamente o objeto $remetentes, e no segundo percorre-se o array de objetos que já estão separados por CNPJ do remetente, esta lógica é utilizda para todas as demais tarefas. Tendo esta separação, é necessário apenas somar os campos referentes a valor, estes são armazenados na variável $somar_notas_rementente.
+
+A medida que tem-se o total para cada CNPJ remetente, é armazenado em um outro objeto criado
 
 ## Calcular o valor que o remetente irá receber pelo que já foi entregue.
 
@@ -45,9 +46,7 @@ Todos os processos utilizaram o mesmo controller, sendo utilizado apenas funçõ
 
 # Rotas
 
-Cada rota direcionada para a respectiva função
-
-- /                   -> página principal com o link para as respectivas tarefas
+- /                   -> view principal somente com os links para as respectivas tarefas
 - /azapfy             -> envia para o apicontroller, em sua função 'index'
 - /valor-nota         -> envia para o apicontroller, em sua função 'readValorNota'
 - /valor-entregue     -> envia para o apicontroller, em sua função 'readValorEntregue'
