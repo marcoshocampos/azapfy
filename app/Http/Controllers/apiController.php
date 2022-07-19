@@ -78,7 +78,6 @@ class apiController extends Controller
                     $dt_ent = new DateTime(str_replace("/", "-", $nota['dt_entrega']));
                     $dt_ent->format('Y-m-d\TH:i:s.Z\Z');
 
-
                     $dt_emis = new DateTime(str_replace("/", "-", $nota['dt_emis']));
                     $dt_emis->format('Y-m-d\TH:i:s.Z\Z');
 
@@ -99,7 +98,6 @@ class apiController extends Controller
 
     public function readValorNaoEntregue()
     {
-
         //Calcular o valor que o remetente irá receber pelo que ainda não foi entregue.
 
         $soma_aberto = [];
