@@ -1,6 +1,6 @@
 # Sobre o Projeto
 
-Neste projeto foi desenvolvido uma API que faz o controles de pagamento por entregas realizadas. O mesmo foi desenvolvido em PHP com auxílio do framework Laravel em sua versão 9.19.0.
+Neste projeto foi desenvolvido uma API que faz o controle de pagamento por entregas realizadas. O mesmo foi desenvolvido em PHP com auxílio do framework Laravel em sua versão 9.19.0.
 
 # Execução do Projeto
 
